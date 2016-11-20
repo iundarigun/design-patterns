@@ -10,6 +10,7 @@ public abstract class GeradorArquivo {
     /**
      * Resolvemos o problema da duplicidade combinando o templatemethod e o strategy, criando uma interface
      * para o processamento e deixando na herança a geração do conteúdo com o uso dos hooks methods.
+     * Caso não houver pos processamento, podemos usar o padrão nullObject para retornar só o array de bytes.
      */
     public byte[] gerarArquivo(){
         String conteudo = gerarConteudo();
