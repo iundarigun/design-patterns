@@ -13,6 +13,8 @@ public abstract class ProcessarLinha {
 
     /**
      * Na solução isolamos a implementacao em métodos que serão implementados pelos herderos
+     *
+     * https://refactoring.guru/design-patterns/template-method
      */
     public void processar(){
         // Salvar a linha na tabela Linha

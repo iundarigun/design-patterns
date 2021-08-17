@@ -5,6 +5,7 @@ public class Principal {
      * O strategy deixa a implementação do calculo para a implementação da interface
      * Desse jeito só temos que nos preocupar de que tipo de cliente se trata e classe especifica
      * se diponibiliza para realizar o cálculo
+     * https://refactoring.guru/design-patterns/strategy
      */
     public static void main(String... args){
         Cliente cliente = getTipoCliente(args[0]);

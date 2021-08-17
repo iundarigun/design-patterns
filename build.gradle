@@ -1,12 +1,20 @@
-apply plugin: 'java'
-apply plugin: 'idea'
+plugins {
+    id "java"
+}
 
 repositories{
     mavenCentral()
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 dependencies{
-    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.10'
-    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
 }

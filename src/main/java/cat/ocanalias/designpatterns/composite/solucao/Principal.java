@@ -8,6 +8,8 @@ public class Principal {
     /**
      * Com o composite é mais facil criar os trechos e calcular o preço. E ainda colocamos de forma
      * simples uma taxa de conexão.
+     *
+     * https://refactoring.guru/design-patterns/composite
      */
     public static void main(String... args) {
         TrechoAereo trechoAereo= new TrechoComposto(new TrechoSimples("São Paulo", "Brasilia", 350.00),

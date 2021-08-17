@@ -15,10 +15,18 @@ public class Transacao extends Observavel<Transacao> {
     private String status;
     private BigDecimal valor;
 
+    public Transacao() {
+        adicionaObervador(new NotificarEmail());
+        adicionaObervador(new NotificarSMS());
+        adicionaObervador(new RealizarMovimentacao());
+    }
+
     /**
      * Agora deixamos que o método notifica envie para os observadores
      * registrados os dados para ele fazer a ação que precisar.
      * Na configuração, só precisaremos adicionar os observadoress
+     *
+     * https://refactoring.guru/design-patterns/observer
      */
     public void finalizarTransacao(){
        log.info("A transação foi confirmada");
